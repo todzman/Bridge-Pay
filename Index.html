@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+    <title>Bridge Pay</title>
+</head>
+	
+<body bgcolor="#54D54A">
+	<div style="background-color:whitesmoke;margin-top:1%;margin-left:5%;margin-right:5%;border-radius: 20px;align-content: center;padding: 3% 5%; ">
+	<img src="Logo.png" height ="150px" style="margin-left: 40%"/>
+		<p style="color:#54D54A;text-align: center; ">Cross the Bridge to Freedom.</p>
+    <h1 id="paytitle">Personal Information</h1>
+		<form id="PersInfo" method ="post">
+        <label> Name and Surname</label>
+        <input type="text" placeholder="John Sibanda" id="Names">
+        <label> Phone Number</label>
+        <input type="text" placeholder="+263 78 229 5292" class="payInput" id="Phone">
+        <label> Address</label>
+        <input type="text" placeholder="7805 Borrowdale Harare" class="payInput" id="Address">
+		</form>
+		<input type="radio" id="Anon"><label> Leave Out</label>
+		
+	<form method="post">
+        <table border="thin" style="border-spacing: 15px;margin-top: 10px;">
+		<tr><th><h2>SENDER PAYMENT METHOD</h2></th><th><h2>       RECEPEINT PAYMENT METHOD</h2></th></tr>
+			<tr><td id = "EcocashSend"><input  type= "radio" class="Eco" name="send" ><img src="EcoCash.png" width="40px" style="margin-right: 10px;"/>Ecocash</td><td id = "EcocashRec"><input  type= "radio" class="Eco" name="receive"><img src="EcoCash.png" width="40px" style="margin-right: 10px;"/>Ecocash</td></tr>
+			
+		<tr><td id="OneSend"><input  type= "radio" class="One" name="send" ><img src="One.png" width="40px" style="margin-right: 10px;"/>One-Money</td><td id="OneRec"><input  type= "radio" class="One" name="receive" ><img src="One.png" width="40px" style="margin-right: 10px;"/>One-Money</td></tr>
+			
+		<tr><td id="InnSend"><input  type= "radio" class="Inn" name="send" ><img src="InnBucks.png" width="40px" style="margin-right: 10px;"/>InnBucks</td><td id="InnRec"><input  type= "radio" class="Inn" name="receive" ><img src="InnBucks.png" width="40px" style="margin-right: 10px;" />InnBucks</td></tr>
+			
+		<tr><td id="MukSend"><input  type= "radio" class="Mukuru" name="send" ><img src="Mukuru.png" width="40px" style="margin-right: 10px;" />Mukuru</td><td id ="MukRec"><input  type= "radio" class="Mukuru" name="receive" ><img src="Mukuru.png" width="40px" style="margin-right: 10px;" />Mukuru</td></tr>
+			
+			<tr><td id ="OmSend"><input  type= "radio" class="Omari" name="send" ><img src="Omari.png" width="40px" style="margin-right: 10px;"/>Omari</td><td id="OmRec"><input  type= "radio" class="Omari" name="receive" ><img src="Omari.png" width="40px" style="margin-right: 10px;" />Omari</td></tr>
+			
+			<tr><td id="BaSend"><input  type= "radio" class="Bank" name="send" ><img src="Bank.png" width="40px" style="margin-right: 10px;" />Bank Transfer</td><td id="BaRec"><input  type= "radio" class="Bank" name="receive" ><img src="Bank.png" width="40px" style="margin-right: 10px;" />Bank Transfer</td></tr>
+			
+			<tr><td id="BTCSend"><input  type= "radio" class="Crypt" name="send" ><img src="Crypto.png" width="40px" style="margin-right: 10px;"/>Bitcoin(BTC)</td><td id="BTCRec"><input  type= "radio" class="Crypt" name="receive" ><img src="Crypto.png" width="40px" style="margin-right: 10px;" />Bitcoin(BTC)</td></tr>
+			
+			<tr><td id="USDTSend"><input  type= "radio" class="Crypt" name="send" ><img src="usdt.png" width="40px" style="margin-right: 10px;"/>Tether(USDT)</td><td id="USDTRec"><input  type= "radio" class="Crypt" name="receive" ><img src="usdt.png" width="40px" style="margin-right: 10px;" />Tether(USDT)</td></tr>
+			
+			
+			<tr><td id="TelSend"><input  type= "radio" class="Tele" name="send" ><img src="Telecash.png" width="40px" style="margin-right: 10px;"/>TeleCash</td><td id="TelRec"><input  type= "radio" class="Tele" name="receive" ><img src="Telecash.png" width="40px" style="margin-right: 10px;"/>TeleCash</td></tr>
+			<tr><td> <input type="text" placeholder="" class="payInput" id ="TextBoxSend"></td><td> <input type="text" placeholder="" class="payInput" id="TextBoxRec"></td></tr>
+		</table>
+		<p style="margin-left: 25%"> $<input type="number" placeholder="Amount in USD"  id="Amount" ></p>
+            <button type="submit" class="transfer" style="background-color:#528DC4;margin-left:30% ;border-radius: 7px;margin-top:5px; " id="Transfer" > TRANSFER</button>
+  </div>
+     	<div id="BitcoinQR" style="background-color:white;margin: 10% 10%; padding: 20px 20px;border-radius: 10px;display:inherit; ">
+			<table style="border-spacing:50px "><tr><td><img src="BitcoinQR.png" height="300px"/></td><td><img src="USDTQR.png" height="300px"/></td></tr></div>   
+<tr><td>bc1q6k6874es5su6rcs6xrz98ycsyp9v308wf8rj67</td><td>0xCC6d1f83904268d995C4655983776Dc99B6430df </td></tr>
+			
+			</table>
+		</form>
+<script type="text/javascript">
+	function GetO(i) {
+	return	document.getElementById(i)
+	}
+	
+	function Styl(i) {
+	return	GetO(i).style
+	}
+	
+	
+	GetO("EcocashRec").onclick = function () {GetO('TextBoxRec').placeholder = "Ecocash phone number"}
+	GetO("OneRec").onclick = function () {GetO('TextBoxRec').placeholder = "One-Money  phone number"}
+	GetO("InnRec").onclick = function () {GetO('TextBoxRec').placeholder = "InnBucks phone number"}
+	GetO("MukRec").onclick = function () {GetO('TextBoxRec').placeholder = "Mukuru phone number "}
+	GetO("OmRec").onclick = function () {GetO('TextBoxRec').placeholder = "Omari phone  number"}
+	GetO("BaRec").onclick = function () {GetO('TextBoxRec').placeholder = "Bank Card number"}
+	GetO("BTCRec").onclick = function () {GetO('TextBoxRec').placeholder = "Bitcoin Address "}
+	GetO("USDTRec").onclick = function () {GetO('TextBoxRec').placeholder = "USDT Address "}
+	GetO("TelRec").onclick = function () {GetO('TextBoxRec').placeholder = "Telecel phone number "}
+	
+		
+	GetO("EcocashSend").onclick = function () {GetO('TextBoxSend').placeholder = "Ecocash phone number" }
+	GetO("OneSend").onclick = function () {GetO('TextBoxSend').placeholder = "One-Money  phone number"}
+	GetO("InnSend").onclick = function () {GetO('TextBoxSend').placeholder = "InnBucks phone number"}
+	GetO("MukSend").onclick = function () {GetO('TextBoxSend').placeholder = "Mukuru phone number"}
+	GetO("OmSend").onclick = function () {GetO('TextBoxSend').placeholder = "Omari phone  number"}
+	GetO("BaSend").onclick = function () {GetO('TextBoxSend').placeholder = "Bank Card number"}
+	GetO("BTCSend").onclick = function () {GetO('TextBoxSend').placeholder = "Bitcoin Address"}
+	GetO("USDTSend").onclick = function () {GetO('TextBoxSend').placeholder = "USDT Address"}
+	GetO("TelSend").onclick = function () {GetO('TextBoxSend').placeholder = "Telecel phone number"}
+	
+	GetO("Anon").onclick = function () {Styl('PersInfo').display = 'none'}
+	GetO("Anon").ondblclick = function () {Styl('PersInfo').display = 'inherit'}
+	 
+	let valid_number1 = GetO("TextBoxSend").value
+	let valid_number2 = GetO("TextBoxRec").value
+	let valid_Amount = GetO("Amount").value
+	
+
+	
+	let names = GetO('Names').value
+	let phone = GetO('Phone').value
+	let address = GetO('Address').value
+	
+	const Client_Request = new XMLHttpRequest()
+       Client_Request.onreadystatechange = function () {if(this.readyState == 4 && this.status == 200) {alert("Your Bridge Pay request was received Successfully")}}
+	   Client_Request.open("POST","Client_Requests.txt",true);
+	 Client_Request.setRequestHeader("Content-type", "Hash encoded")
+	Client_Request.send(names + "  " + phone + "  "+ address + "  " + valid_Amount + "  " +valid_number1 + "  " +valid_number2);
+	
+	</script>
+</body>
+</html>
